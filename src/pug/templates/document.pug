@@ -1,0 +1,16 @@
+.m-document
+  ._title <%= document.attributes.title %>
+    a._link(href!="#link/<%= document.cid %>")
+  ._description <%= document.attributes.description %>
+  ._tags
+    <% _.each(document.attributes.tags, function(tag) { %>
+      ._tag: a._link(href!="#tag/<%= tag %>") <%= tag %>
+    <% }); %>
+  ._code
+    ._wrapper.pure-g
+      ._heading.pure-u-20-24 <%= document.attributes.pug %>
+      ._toggle-icon-area.pure-u-4-24: ._toggle-icon.js_hook_toggle_document_code_body
+    ._body._hidden
+  ._iframe
+    a._link(href!="<%= document.attributes.url %>" target="_blank")
+    iframe._body(id!="iframe-<%= document.cid %>" src!="<%= document.attributes.url %>#iframe-<%= document.cid %>")

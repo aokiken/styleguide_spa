@@ -1,0 +1,117 @@
+.m-document {
+  ._title {
+    position: relative;
+    padding: 8px;
+    font-size: 20px;
+    line-height: 1.334;
+    border-bottom: 1px solid #eee;
+    &:hover {
+      ._link {
+        opacity: 1;
+      }
+    }
+    ._link {
+      opacity: 0;
+      transition: opacity .2s;
+      position: absolute;
+      top: 0;
+      right: 8px;
+      height: 100%;
+      width: 40px;
+      background-image: url("data:image/svg+xml,#{$ic_link_black_24px}");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  ._description {
+    padding: 8px;
+  }
+  ._tags {
+    padding: 8px;
+    ._tag {
+      display: inline-block;
+      height: 24px;
+      margin: 0 4px 0 0;
+      background-color: #42B8DD;
+      border-radius: 24px;
+    }
+    ._link {
+      padding: 0 16px;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  ._pug {
+  }
+  ._code {
+    > ._wrapper {
+      height: 40px;
+      line-height: 40px;
+      background-color: #E8E8E8;
+      padding: 0 8px;
+      margin: 8px 0 0 0;
+    }
+    ._toggle-icon-area {
+      position: relative;
+    }
+    ._toggle-icon {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url("data:image/svg+xml,#{$ic_code_black_24px}");
+      background-position: center;
+      background-repeat: no-repeat;
+      ._link {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    ._body {
+      &._hidden {
+        display: none;
+      }
+      display: block;
+      padding: 32px 16px;
+      border-right: 1px solid #E8E8E8;
+      border-left: 1px solid #E8E8E8;
+      background-color: #f5f2f0;
+      white-space: pre;
+    }
+  }
+  ._iframe {
+    position: relative;
+    border-top: none;
+    border-bottom: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    &:hover {
+      ._link {
+        opacity: 1;
+      }
+    }
+    ._link {
+      opacity: 0;
+      transition: opacity .2s;
+      position: absolute;
+      top: 0;
+      right: 8px;
+      height: 40px;
+      width: 40px;
+      background-image: url("data:image/svg+xml,#{$ic_open_in_new_black_24px}");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    ._body {
+      height: 0;
+      width: 100%;
+      margin: 32px 0;
+      border: none;
+      outline: 0;
+      box-sizing: border-box;
+      padding: 0 16px;
+    }
+  }
+}

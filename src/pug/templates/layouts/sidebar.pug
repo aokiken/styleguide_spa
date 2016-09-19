@@ -1,0 +1,7 @@
+<% _.each(directories.models, function(directory) { %>
+  <% if(currentDirectory == directory.attributes.name) { %>
+    li._item._selected: a._link(href!="#directory/<%= directory.attributes.name %>") <%= directory.attributes.name %>
+  <% } else { %>
+    li._item: a._link(href!="#directory/<%= directory.attributes.name %>") <%= directory.attributes.name %>
+  <% }%>
+<% }); %>

@@ -15,5 +15,5 @@ export default Router.extend({
   directory: (directoryName) => app.views.documents.directory(directoryName),
   tag: (tagName) => app.views.documents.tag(tagName),
   search: (query) => app.views.documents.search(query),
-  link: (modelCid) => app.views.documents.link(modelCid),
+  link: (modelId) => app.views.documents.link(modelId),
 });

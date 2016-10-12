@@ -1,6 +1,6 @@
 .m-document
   ._title <%= document.attributes.title %>
-    a._link(href!="#link/<%= document.cid %>")
+    a._link(href!="#link/<%= document.id %>")
   ._description <%= document.attributes.description %>
   ._tags
     <% _.each(document.attributes.tags, function(tag) { %>
@@ -13,4 +13,4 @@
     ._body._hidden
   ._iframe
     a._link(href!="<%= document.attributes.url %>" target="_blank")
-    iframe._body(id!="iframe-<%= document.cid %>" src!="<%= document.attributes.url %>#iframe-<%= document.cid %>")
+    iframe._body(id!="iframe-<%= document.id %>" src!="<%= document.attributes.url %>#iframe-<%= document.id %>")

@@ -68,11 +68,11 @@ export default View.extend({
       }
     });
   },
-  link(modelCid) {
+  link(modelId) {
     this.clear();
     app.views.sidebar.setLinks('');
-    app.views.header.setTitle(`link:${modelCid}`);
-    const doc = new Document({ model: app.collections.documents.get(modelCid) });
+    app.views.header.setTitle(`link:${modelId}`);
+    const doc = new Document({model: app.collections.documents.get({id: modelId})});
     app.views.documents.tmp.push(doc);
     app.views.documents.$el.append(doc.el);
   },

@@ -16,7 +16,7 @@ import ptu from 'gulp-pug-template-underscore';
 import eslint from 'gulp-eslint';
 
 gulp.task('pugTasks', () => {
-  gulp.src('src/pug/**/*.pug')
+  gulp.src(['src/pug/**/*.pug','!src/pug/templates/**/*.pug'])
     .pipe(plumber())
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('dest'));

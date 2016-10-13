@@ -27,8 +27,8 @@ let App = function Application() {
     instance.views.main = new ViewMain();
     instance.views.documents = new ViewDocuments();
     $.when(
-      instance.collections.documents.fetch(),
-      instance.collections.directories.fetch()
+      instance.collections.documents.fetch({ cache: false }),
+      instance.collections.directories.fetch({ cache: false })
     ).done(() => {
       instance.router = new Router();
       Backbone.history.start();

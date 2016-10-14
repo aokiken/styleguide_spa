@@ -11,6 +11,7 @@
       ._heading.pure-u-20-24 <%= document.attributes.pug %>
       ._toggle-icon-area.pure-u-4-24: ._toggle-icon.js_hook_toggle_document_code_body
     ._body._hidden
+      ._copy-icon.btn.js_hook_copy_code(data-clipboard-text!="<%- document.attributes.code %>")
   ._iframe
     a._link(href!="<%= document.attributes.url %>" target="_blank")
     iframe._body(id!="iframe-<%= document.id %>" src!="<%= document.attributes.url %>#iframe-<%= document.id %>")
